@@ -1,0 +1,19 @@
+<nav aria-label="breadcrumb"> 
+  <ol class="breadcrumb"> 
+    <li class="breadcrumb-item"><%= link_to 'Inicio', root_path %></li> 
+    <li class="breadcrumb-item"><%= link_to 'Glosario', glossary_root_path %></li> 
+    <li class="breadcrumb-item active"><%= @topic.name %></li> 
+  </ol> 
+</nav>
+<div class="row">
+  <div class="col-md-3 col-xl-2 border-right">
+    <nav class="nav flex-column">
+      <% @topic.terms.each do |term| %>
+        <%= link_to term.name, glossary_topic_term_path(@topic, term), class: 'nav-link' %>
+      <% end %>
+    </nav>
+  </div>
+  <main class="col-md-9 col-xl-10 pl-md-5">
+    <h1 class="display-4"><%= @topic.name %></h1>
+  </main>
+</div>

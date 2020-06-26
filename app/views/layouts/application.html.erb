@@ -17,8 +17,8 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
-          <li class="nav-item <%= current_page?(controller: 'topics') ? 'active' : '' %>">
-            <%= link_to 'Glosario', topics_path, class: 'nav-link' %>
+          <li class="nav-item">
+            <%= link_to 'Glosario', glossary_root_path, class: is_glossary_namespace?? 'nav-link active': 'nav-link' %>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#">Blog</a>

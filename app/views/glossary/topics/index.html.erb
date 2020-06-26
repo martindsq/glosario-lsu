@@ -1,0 +1,17 @@
+<nav aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><%= link_to 'Inicio', root_path %></li>
+    <li class="breadcrumb-item active">Glosario</li>
+  </ol>
+</nav>
+<h1 class="display-4">Glosario</h1>
+<div class="card-columns">
+  <% @topics.each do |topic| %>
+    <div class="card">
+      <div class="card-body">
+        <h2 class="card-title"><%= topic.name %></h2>
+        <%= link_to 'Ver detalles', glossary_topic_path(topic), class: 'card-link' %>
+      </div>
+    </div>
+  <% end %>
+</div>

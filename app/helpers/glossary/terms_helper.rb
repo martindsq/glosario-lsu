@@ -1,0 +1,2 @@
+module Glossary::TermsHelper
+end

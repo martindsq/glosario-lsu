@@ -1,0 +1,2 @@
+module Glossary::TopicsHelper
+end

@@ -8,6 +8,10 @@ Bundler.require(*Rails.groups)
 
 module GlosarioLsu
   class Application < Rails::Application
+
+    # Add videos folder to the assets pipeline
+    config.assets.paths << "#{Rails.root}/app/assets/videos"
+
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 5.2
 
